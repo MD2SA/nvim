@@ -91,7 +91,7 @@ git clone https://github.com/MD2SA/nvim.git ~/.config/nvim
 ### **Harpoon (quick buffer navigation):**
 - Add a file: `<C-a>`
 - View/edit: `<C-e>`
-- Switch buffers: `<C-a>`, `<C-h>`, `<C-s>`, `<C-n>`, `<C-t>`
+- Switch buffers: `<C-h>`, `<C-s>`, `<C-n>`, `<C-t>`
 - Configuration: `lua/manas/lazy/harpoon.lua`
 - DO USE this plugin—it’s amazing for managing frequently used files.
 <video width="640" height="360" controls>
