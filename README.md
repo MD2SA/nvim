@@ -76,7 +76,7 @@ git clone https://github.com/MD2SA/nvim.git ~/.config/nvim
 
 ## Using This Config
 
-- **Remaps**
+### **Remaps**
 - Lose 30min reading the remaps of this config, start by checking remap.lua and then go to the plugins you may want to use
 - <C-u> and <C-d> to move up and down by half screen
 - <leader>y for copying to system clipboard
@@ -84,16 +84,11 @@ git clone https://github.com/MD2SA/nvim.git ~/.config/nvim
 - Feel free to make you own remaps
 
 
-- **Check errors:**
+### **Check errors:**
 - Place your cursor on a word and press `<leader>vd` to display diagnostics in a floating box.
-<video width="640" height="360" controls>
-  <source src="./videos/errors.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 
-
-- **Harpoon (quick buffer navigation):**
+### **Harpoon (quick buffer navigation):**
 - Add a file: `<C-a>`
 - View/edit: `<C-e>`
 - Switch buffers: `<C-a>`, `<C-h>`, `<C-s>`, `<C-n>`, `<C-t>`
@@ -105,19 +100,15 @@ git clone https://github.com/MD2SA/nvim.git ~/.config/nvim
 </video>
 
 
-- **Telescope (quick file search):**
+### **Telescope (quick file search):**
 - Opens search based on your current directory.
 - Example: open Neovim in `~/.config/nvim` → Telescope will search files in that dir.
 - Shortcut: `<leader>pf`
 - Use partial names—the plugin uses `fd` under the hood, so you don’t need full paths.
 - `<leader>` is set to Spacebar by default, but you can change it.
-<video width="640" height="360" controls>
-  <source src="./videos/telescope.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 
-- **Install LSPs, formatters, and linters:**
+### **Install LSPs, formatters, and linters:**
   1. Run `:Mason` to install the language server for the language you want to use.
      - Example: For TypeScript, search `typescript-language-server` and press `I` to install.
   2. Repeat for any other languages or tools you need.
