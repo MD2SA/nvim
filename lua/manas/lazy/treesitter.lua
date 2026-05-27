@@ -5,7 +5,7 @@ return {
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"
             ensure_installed = {
-                "vimdoc", "javascript", "typescript", "c","java", "lua",
+                "vimdoc", "javascript", "typescript", "c", "cpp", "java", "lua",
                 "jsdoc", "bash", "go", "php",
             },
 
@@ -17,7 +17,8 @@ return {
             auto_install = true,
 
             indent = {
-                enable = true
+                enable = true,
+                disable = { "cpp", "c" }
             },
 
             highlight = {
@@ -28,7 +29,7 @@ return {
                 -- Set this to `true` if you depend on "syntax" being enabled (like for indentation).
                 -- Using this option may slow down your editor, and you may see some duplicate highlights.
                 -- Instead of true it can also be a list of languages
-                additional_vim_regex_highlighting = { "markdown" },
+                -- additional_vim_regex_highlighting = { "markdown" },
             },
         })
 

@@ -9,20 +9,27 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 -- Filetype-specific settings
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "java",
+    pattern = { "java", "cpp", "c", "h", "hpp" },
     callback = function()
         vim.opt_local.tabstop = 8
-        vim.opt.softtabstop = 8
+        vim.opt_local.softtabstop = 8
         vim.opt_local.shiftwidth = 8
         vim.opt_local.expandtab = true
+        vim.opt_local.cindent = true
+        -- Adicionando cinoptions para melhor comportamento em C++
+        vim.opt_local.cinoptions = "g0,:0,N-s,(0"
+        -- Forçar cindent limpando o indentexpr (Treesitter/outros)
+        vim.opt_local.indentexpr = ""
     end,
 })
 
-vim.opt.smartindent = true
+vim.opt.smartindent = false
+vim.opt.autoindent = true
 
 vim.opt.wrap = false
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "text", "markdown" },
+    pattern = "text",
+    -- pattern = { "text", "markdown" },
     callback = function()
         vim.opt.wrap = true
     end,
