@@ -25,12 +25,34 @@ Optional, but useful:
 
 If something does not load correctly, run `:checkhealth` inside Neovim. It usually points directly to missing binaries, broken providers, or plugin issues.
 
+On Windows, using a package manager makes setup and cleanup much easier. Good options include:
+
+- Scoop: <https://scoop.sh/>
+- Chocolatey: <https://chocolatey.org/>
+- Winget: <https://learn.microsoft.com/windows/package-manager/winget/>
+
+Before choosing one, read its installation instructions and make sure the tools it installs are added to your system `PATH`. Neovim can only call commands like `git`, `rg`, `fd`, compilers, and language servers if they are available from your terminal.
+
+For example, with Scoop you can install most dependencies with:
+
+```powershell
+scoop install git neovim gcc make ripgrep fd unzip wget luarocks nodejs python
+```
+
 ## Installation
 
-Clone this repository into Neovim's config directory:
+Clone this repository into Neovim's config directory.
+
+Linux/macOS:
 
 ```bash
 git clone https://github.com/MD2SA/nvim.git ~/.config/nvim
+```
+
+Windows PowerShell:
+
+```powershell
+git clone https://github.com/MD2SA/nvim.git "$env:LOCALAPPDATA\nvim"
 ```
 
 Start Neovim:
@@ -44,6 +66,12 @@ Plugins are managed with `lazy.nvim`. On first launch, plugins should install au
 ```vim
 :Lazy sync
 ```
+
+## Windows Notes
+
+Neovim and much of its plugin ecosystem are primarily designed with Unix-like environments in mind, so Windows support may require some additional care.
+
+This configuration was created and tested on Linux. While the config itself should remain mostly portable, compatibility issues on Windows are more likely to come from Neovim, plugins, Treesitter parsers, LSP/toolchain installations, shell commands, or native builds.
 
 ## What's Included
 
@@ -78,8 +106,8 @@ Plugins are managed with `lazy.nvim`. On first launch, plugins should install au
             ├── autotag.lua
             ├── cmp.lua
             ├── colors.lua
+            ├── editorconfig.lua
             ├── harpoon.lua
-            ├── init.lua
             ├── lsp.lua
             ├── telescope.lua
             ├── treesitter.lua
