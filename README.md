@@ -4,6 +4,16 @@ Personal Neovim configuration focused on a fast keyboard-driven workflow, sensib
 
 The setup is intentionally small and readable. It is based on ideas from ThePrimeagen's configuration, with changes for my own workflow and a cleaner module layout.
 
+## Previews
+
+![Neovim Preview](https://github.com/user-attachments/assets/6f0471a1-d572-48f3-86db-88dcfcf82278)
+
+![Telescope Preview](https://github.com/user-attachments/assets/0bf2c6f7-65c3-40ea-8cf0-704fd8704809)
+
+### Video Showcase
+
+<video src="https://github.com/user-attachments/assets/ed796364-12cd-4b68-96b5-e3ac8d061b36" width="100%" controls muted></video>
+
 ## Requirements
 
 Install these system dependencies before opening Neovim for the first time:
