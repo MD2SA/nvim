@@ -4,6 +4,8 @@ Personal Neovim configuration focused on a fast keyboard-driven workflow, sensib
 
 The setup is intentionally small and readable. It is based on ideas from ThePrimeagen's configuration, with changes for my own workflow and a cleaner module layout.
 
+For a quick look at the setup, see the [Previews](#previews) section.
+
 ## Requirements
 
 Install these system dependencies before opening Neovim for the first time:
@@ -247,25 +249,28 @@ Useful references:
 <table>
   <tr>
     <td width="50%" align="center">
-      <strong>General Preview</strong><br />
+      <strong>General</strong><br />
       <img src="https://github.com/user-attachments/assets/d022dcd1-96ed-47d1-ba6a-d258208364d6" width="100%" />
     </td>
     <td width="50%" align="center">
-      <strong>Telescope Preview</strong><br />
+      <strong>Telescope</strong><br />
       <img src="https://github.com/user-attachments/assets/b7e742e2-d024-4a74-8474-c53d7e510ab9" width="100%" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
-      <strong>Undotree Preview</strong><br />
+      <strong>Undotree</strong><br />
       <img src="https://github.com/user-attachments/assets/0924c672-facd-4b0a-8b0a-343b4d43c53b" width="100%" />
     </td>
     <td width="50%" align="center">
-      <strong>Harpoon Preview</strong><br />
+      <strong>Harpoon</strong><br />
       <img src="https://github.com/user-attachments/assets/df90d441-a77a-4d34-864c-1a2367a33897" width="100%" />
     </td>
   </tr>
 </table>
+
+> [!NOTE]
+> The screenshots reflect my personal setup. Colorschemes and most of the configuration can be customized to suit your preferences.
 
 ## Notes
 
