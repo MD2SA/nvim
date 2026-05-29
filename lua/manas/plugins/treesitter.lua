@@ -8,7 +8,7 @@ return {
 
         local ensure_installed = {
             "vimdoc", "javascript", "typescript", "cpp",
-            "java", "lua", "bash",
+            "java", "lua", "bash", "python",
         }
         
         local installed = require("nvim-treesitter").get_installed()

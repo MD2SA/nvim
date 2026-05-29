@@ -225,6 +225,34 @@ Trouble provides a diagnostics panel.
 | `[t` | Previous Trouble item |
 | `]t` | Next Trouble item |
 
+### Treesitter Languages
+
+Treesitter parsers are not installed automatically for every new filetype you open. This configuration keeps the parser list explicit in `lua/manas/plugins/treesitter.lua` so setup stays predictable across machines.
+
+To add regular support for a new language, add its parser name to the `ensure_installed` list:
+
+```lua
+local ensure_installed = {
+    "vimdoc", "javascript", "typescript", "cpp",
+    "java", "lua", "bash",
+    -- add more parser names here, for example "rust"
+}
+```
+
+On the next Neovim launch, missing parsers from that list are installed automatically.
+
+For one-off manual installs, run:
+
+```vim
+:TSInstall python
+```
+
+To update installed parsers, run:
+
+```vim
+:TSUpdate
+```
+
 ## Language Servers
 
 LSP configuration lives in `lua/manas/plugins/lsp.lua`.
