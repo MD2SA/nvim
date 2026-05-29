@@ -10,20 +10,34 @@ For a quick look at the setup, see the [Previews](#previews) section.
 
 Install these system dependencies before opening Neovim for the first time:
 
+- `neovim` 0.12 or newer
 - `git`
-- `gcc` or `clang`
-- `make`
-- `ripgrep` (`rg`)
-- `fd`
+- `curl`
 - `unzip`
-- `wget`
-- `luarocks`
+- `tar`
+- `gzip`
+- `make`
+- `gcc` or `clang`
+- `tree-sitter` CLI 0.26.1 or newer
+- `ripgrep` (`rg`)
+- `node` and `npm`
+- Java 21 or newer
 
 Optional, but useful:
 
-- `node`, for some Treesitter workflows and JavaScript tooling
-- `python3`, for Python tooling and plugin integrations
-- `PowerShell 7+`, if using this configuration on Windows
+- `fd`, for faster Telescope file finding
+- `python3`, for Python projects and Neovim Python provider support
+- `7zip`, if archive extraction fails on Windows
+
+Why these are needed:
+
+- `lazy.nvim` bootstraps plugins with `git`
+- `mason.nvim` installs LSP servers and needs download/archive tools such as `curl`, `unzip`, `tar`, and `gzip`
+- `nvim-treesitter` installs parsers with the `tree-sitter` CLI and a C compiler
+- `LuaSnip` builds `jsregexp` with `make` and a C compiler
+- Telescope uses `ripgrep` for grep-based searches
+- Mason installs `pyright`, which uses `node`/`npm`
+- The configured Java LSP (`jdtls`) needs Java 21 or newer
 
 If something does not load correctly, run `:checkhealth` inside Neovim. It usually points directly to missing binaries, broken providers, or plugin issues.
 
@@ -33,13 +47,15 @@ On Windows, using a package manager makes setup and cleanup much easier. Good op
 - Chocolatey: <https://chocolatey.org/>
 - Winget: <https://learn.microsoft.com/windows/package-manager/winget/>
 
-Before choosing one, read its installation instructions and make sure the tools it installs are added to your system `PATH`. Neovim can only call commands like `git`, `rg`, `fd`, compilers, and language servers if they are available from your terminal.
+Before choosing one, read its installation instructions and make sure the tools it installs are added to your system `PATH`. Neovim can only call commands like `git`, `rg`, `tree-sitter`, compilers, and language servers if they are available from your terminal.
 
 For example, with Scoop you can install most dependencies with:
 
 ```powershell
-scoop install git neovim gcc make ripgrep fd unzip wget luarocks nodejs python
+scoop install git neovim gcc make ripgrep fd unzip curl tree-sitter nodejs-lts python openjdk21
 ```
+
+Recent Windows versions include `tar`; if `:checkhealth` reports archive issues, install `7zip` as well.
 
 ## Installation
 
