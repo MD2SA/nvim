@@ -290,4 +290,4 @@ Useful references:
 
 ## Notes
 
-This is a personal config, not a framework. It is meant to be easy to read, copy from, and change. The best way to adapt it is to start with `lua/manas/core/keymaps.lua`, then move through the plugin files one by one.
+This is a personal config, not a framework. It is meant to be easy to read, copy from, and change. The best way to adapt it is to start with `lua/manas/core/*.lua`, then move through the plugin files one by one.
